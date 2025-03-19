@@ -1,20 +1,18 @@
 {
-  "name": " ",
+  "name": "sites",
   "version": "0.0.1",
-  "description": "",
+  "description": "Webpack starter template",
   "private": true,
-  "keywords": [
-    ""
-  ],
-  "license": "",
-  "author": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.5.1",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2",
