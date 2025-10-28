@@ -1,0 +1,92 @@
+Pack Studio is currently not supported in Safari and you may encounter errors while building Packs. We recommend using Google Chrome.
+
+](https://coda.io/workspaces/ws-Mmu6ibUq5l/packs)
+
+![Logo of the Pack](https://cdn.coda.io/assets/c2adfd6ef890/img/packs/default-pack-icon.png)
+
+ShareReleaseHelp
+
+![](https://images-codaio.imgix.net/https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAAcHTtc9dqwel2atTvjoGcNrnL02jcOTmUUbMG-ghB5PnXqR5jYu%3Ds96-c?ixlib=js-3.8.0&auto=format%2Ccompress&fit=crop&w=360&h=360&crop=faces&s=c64159f0061c9801b3ce1cf7c0a7bc07)
+
+](https://coda.io/workspaces/ws-Mmu6ibUq5l/packs)
+
+![Logo of the Pack](https://cdn.coda.io/assets/c2adfd6ef890/img/packs/default-pack-icon.png)
+
+CodeListingHistorySettingsStats
+
+## Listing
+
+Everyone you've shared this Pack with will see this listing. 
+
+ListingPricing
+
+Name
+
+Max character limit of 30.
+
+Tagline
+
+Max character limit of 140.
+
+Icon
+
+Recommended
+- 200x200, PNG or JPG
+- Solid background color
+- Logo in the middle
+
+Makers
+
+Give the editors of your Pack public credit. Add an editor.
+
+![](https://images-codaio.imgix.net/https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAAcHTtc9dqwel2atTvjoGcNrnL02jcOTmUUbMG-ghB5PnXqR5jYu%3Ds96-c?ixlib=js-3.8.0&auto=format%2Ccompress&fit=crop&w=360&h=360&crop=faces&s=c64159f0061c9801b3ce1cf7c0a7bc07)
+
+Kevo (Cybersoulja)
+
+Support email
+
+People can use this email to contact you for help and will be publicly visible.
+
+Cover photo
+
+Optional. Recommended size of 2800x600
+
+Description
+
+Optional. Max character limit of 8000.
+
+Featured docs
+
+Optional. Add up to five published docs to feature on your Pack listing and to make available as templates in a doc. Must be copyable to be used as a template.
+
++ Add another doc
+
+Categories
+
+Optional.
+
+​
+
+Terms of Service
+
+Add a link to your terms of service.
+
+Privacy policy
+
+Add a link to your privacy policy.
+
+Card preview
+
+](https://coda.io/packs/coda-app-24368)
+
+![Pack icon](https://cdn.coda.io/assets/c2adfd6ef890/img/packs/default-pack-icon.png)
+
+Free
+
+Coda App
+
+By Kevo (Cybersoulja)
+
+[How to launch your Pack ](https://coda.io/@joebauer/best-practices-for-launching-your-pack)[Creating Pack icon and cover photo ](https://www.figma.com/community/file/1027307018332310438/Coda---Packs-Marketing-Toolkit?utm_source=coda&utm_medium=iframely)
+
+SaveShare Pack
