@@ -4,16 +4,40 @@
   "description": "Webpack starter template",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack serve --open --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
+    "lint": "eslint js/app.js \"js/__tests__/**/*.js\"",
+    "lint:fix": "eslint js/app.js \"js/__tests__/**/*.js\" --fix",
+    "format": "prettier --write \"**/*.{js,css,scss,html,json}\"",
+    "format:check": "prettier --check \"**/*.{js,css,scss,html,json}\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
   "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@eslint/js": "^10.0.1",
+    "babel-jest": "^30.3.0",
     "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^7.1.4",
+    "eslint": "^10.2.1",
     "gh-pages": "^6.3.0",
+    "globals": "^17.5.0",
     "html-webpack-plugin": "^5.5.1",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "mini-css-extract-plugin": "^2.10.2",
+    "prettier": "^3.8.3",
+    "sass": "^1.99.0",
+    "sass-loader": "^16.0.7",
+    "style-loader": "^4.0.0",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2",
     "webpack-dev-server": "^4.13.3",

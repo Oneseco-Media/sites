@@ -1,0 +1,155 @@
+// Variables
+$primary-color: #0066cc;
+$primary-hover: #0052a3;
+$max-width: 800px;
+$border-radius: 4px;
+$font-family: Arial, sans-serif;
+
+// Dark mode colors
+$dark-bg: #1a1a2e;
+$dark-surface: #16213e;
+$dark-text: #e0e0e0;
+$dark-primary: #4d9fff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($properties...) {
+  transition-property: $properties;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+// Base styles
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  @include transition(background-color, color);
+
+  &.dark-mode {
+    background-color: $dark-bg;
+    color: $dark-text;
+
+    #app {
+      background-color: $dark-surface;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    button:not(#darkModeToggle) {
+      background: $dark-primary;
+
+      &:hover {
+        background: darken($dark-primary, 10%);
+      }
+    }
+
+    .counter-section {
+      border-color: rgba(255, 255, 255, 0.1);
+
+      .counter-display {
+        color: $dark-primary;
+      }
+    }
+  }
+}
+
+#app {
+  max-width: $max-width;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: $font-family;
+  background-color: #fff;
+  border-radius: $border-radius * 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  @include transition(background-color, box-shadow);
+
+  h1 {
+    margin-top: 0;
+    color: $primary-color;
+    font-size: 1.8rem;
+  }
+}
+
+.content {
+  margin-top: 1rem;
+}
+
+// Button styles
+button {
+  padding: 0.5rem 1rem;
+  background: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: 0.9rem;
+  @include transition(background, transform);
+
+  &:hover {
+    background: $primary-hover;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+// Counter section
+.counter-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  @include transition(border-color);
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+
+  .counter-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    margin: 0.5rem 0;
+    @include transition(color);
+  }
+
+  .counter-buttons {
+    @include flex-center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+
+    button {
+      font-size: 1rem;
+      padding: 0.4rem 0.9rem;
+
+      &.btn-danger {
+        background: #cc3300;
+
+        &:hover {
+          background: darken(#cc3300, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Dark mode toggle
+#darkModeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #333;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  z-index: 100;
+
+  &:hover {
+    background: #555;
+  }
+}
