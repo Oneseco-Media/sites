@@ -25,10 +25,11 @@ const createApp = () => {
     const status = document.getElementById('shareStatus');
 
     try {
-      const shareUrl = telegramFileshare.share({ fileUrl, fileName, caption });
-      status.textContent = `Opened Telegram share link: ${shareUrl}`;
+      telegramFileshare.share({ fileUrl, fileName, caption });
+      status.textContent = 'Telegram share window opened.';
     } catch (error) {
-      status.textContent = error.message;
+      console.error(error);
+      status.textContent = 'Unable to create Telegram share link. Please verify the file URL.';
     }
   });
 };

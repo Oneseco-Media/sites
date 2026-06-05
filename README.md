@@ -1,6 +1,6 @@
 ## Telegram Fileshare Module
 
-The app now includes a Telegram Fileshare flow in `/tmp/workspace/Oneseco-Media/sites/js/modules/telegramFileshare.js`.
+The app now includes a Telegram Fileshare flow in `js/modules/telegramFileshare.js`.
 
 ### How to use
 
