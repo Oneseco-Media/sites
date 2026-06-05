@@ -7,6 +7,14 @@
 
 .content {
   margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
