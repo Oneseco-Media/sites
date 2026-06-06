@@ -6,30 +6,31 @@ const createApp = () => {
   const app = document.createElement('div');
   app.id = 'app';
   app.innerHTML = `
-    <h1>Oneseco-IO Telegram Fileshare</h1>
+    <h1>Welcome to My App</h1>
     <div class="content">
-      <p>Share a file URL quickly through Telegram.</p>
-      <input id="fileName" type="text" placeholder="File name (optional)" />
-      <input id="fileUrl" type="url" placeholder="https://example.com/file.pdf" required />
-      <input id="caption" type="text" placeholder="Caption (optional)" />
-      <button id="shareFile">Share via Telegram</button>
-      <p id="shareStatus" aria-live="polite"></p>
+      <p>This is a webpack-powered application</p>
+      <button id="clickMe">Click Me!</button>
+      <button id="shareTelegram">Share URL via Telegram</button>
     </div>
   `;
   document.body.appendChild(app);
 
-  document.getElementById('shareFile').addEventListener('click', () => {
-    const fileName = document.getElementById('fileName').value.trim();
-    const fileUrl = document.getElementById('fileUrl').value.trim();
-    const caption = document.getElementById('caption').value.trim();
-    const status = document.getElementById('shareStatus');
+  // Add button click handler
+  document.getElementById('clickMe').addEventListener('click', () => {
+    alert('Button clicked!');
+  });
+
+  document.getElementById('shareTelegram').addEventListener('click', () => {
+    const fileUrl = window.prompt('Enter a public http/https file URL to share on Telegram:');
+    if (!fileUrl) {
+      return;
+    }
 
     try {
-      telegramFileshare.share({ fileUrl, fileName, caption });
-      status.textContent = 'Telegram share window opened.';
+      telegramFileshare.share({ fileUrl: fileUrl.trim() });
     } catch (error) {
       console.error(error);
-      status.textContent = 'Unable to create Telegram share link. Please verify the file URL.';
+      alert('Unable to create Telegram share link. Please verify the URL.');
     }
   });
 };
