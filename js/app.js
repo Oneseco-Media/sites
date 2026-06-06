@@ -10,7 +10,9 @@ const createApp = () => {
     <div class="content">
       <p>This is a webpack-powered application</p>
       <button id="clickMe">Click Me!</button>
+      <input id="telegramFileUrl" type="url" placeholder="https://example.com/file.pdf" />
       <button id="shareTelegram">Share URL via Telegram</button>
+      <p id="shareStatus" aria-live="polite"></p>
     </div>
   `;
   document.body.appendChild(app);
@@ -21,16 +23,25 @@ const createApp = () => {
   });
 
   document.getElementById('shareTelegram').addEventListener('click', () => {
-    const fileUrl = window.prompt('Enter a public http/https file URL to share on Telegram:');
+    const fileUrl = document.getElementById('telegramFileUrl').value.trim();
+    const shareStatus = document.getElementById('shareStatus');
+
     if (!fileUrl) {
+      shareStatus.textContent = 'Please enter a public file URL.';
       return;
     }
 
     try {
-      telegramFileshare.share({ fileUrl: fileUrl.trim() });
+      const parsedUrl = new URL(fileUrl);
+      if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
+        throw new Error('Only HTTP and HTTPS URLs are supported.');
+      }
+
+      telegramFileshare.share({ fileUrl });
+      shareStatus.textContent = 'Telegram share window opened.';
     } catch (error) {
       console.error(error);
-      alert('Unable to create Telegram share link. Please verify the URL.');
+      shareStatus.textContent = 'Unable to create Telegram share link. Please verify the URL.';
     }
   });
 };
