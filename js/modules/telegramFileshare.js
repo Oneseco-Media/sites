@@ -3,7 +3,7 @@ class TelegramFileshareModule {
     this.shareBaseUrl = options.shareBaseUrl || 'https://t.me/share/url';
   }
 
-  createShareUrl({ fileUrl, fileName = '', caption = '' }) {
+  createShareUrl({ fileUrl, fileName = '', caption = '' } = {}) {
     if (!fileUrl) {
       throw new Error('A file URL is required.');
     }

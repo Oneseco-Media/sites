@@ -10,7 +10,7 @@ const createApp = () => {
     <div class="content">
       <p>This is a webpack-powered application</p>
       <button id="clickMe">Click Me!</button>
-      <input id="telegramFileUrl" type="url" placeholder="https://example.com/file.pdf" />
+      <input id="telegramFileUrl" type="url" placeholder="https://example.com/file.pdf" aria-label="File URL to share via Telegram" />
       <button id="shareTelegram">Share URL via Telegram</button>
       <p id="shareStatus" aria-live="polite"></p>
     </div>
